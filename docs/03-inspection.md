@@ -11,7 +11,7 @@ Inspecting the results of SBOMs and vulnerabilities across source applications a
 
 1. Inspect files for malicious content
 2. Inspect packages for malicious content
-3. Analyze each vulnerability to gather sufficient information about risk to plan its remediation
+3. Analyze vulnerabilities & gather information about risks / plan remediation
 4. Inspect for license abuse/misuse
 5. Inspect source code repos for vulns
 6. Inspect & monitor file permissions

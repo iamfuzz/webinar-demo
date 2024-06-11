@@ -9,8 +9,8 @@ For example, an organization may raise policy violations for vulnerabilities sco
 These policy violations can generate alerts and notifications or be used to stop builds in the CI/CD pipeline or prevent code from moving to production.
 Policy enforcement can be applied at any stage in the development process, from the selection and usage of open source components through the build, staging, and deployment process, here are our top 10 uses:
 
-1. Policy alerts and enforces for malware findings
-2. Create a policy that doesn't cripple velocity
+1. Policy alerts for malware findings
+2. Create a policy that doesn't inhibit velocity
 3. Enforce control of license abuse/misuse via Policy
 4. Enforce secret + password monitoring in Policy
 5. Policy checks for known exploited vulnerabilities across SDLC

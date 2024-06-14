@@ -199,7 +199,7 @@ We can achieve this by adding a hints json file that contains the metadata ancho
 Let's first "check and submit" the source code as v2.0.0. Then we move onto building an image, and look at the hints process.
 ```bash
 cd ../app:v2.0.0 &&
-anchorectl source add github.com/anchore/webinar-demo@106c2d9fffe01f564d889763d904cace7f32be3f --branch 'v2.0.0' --author 'author-from-ci@example.com' --application 'app@v2.0.0' --workflow-name 'default' --from -
+anchorectl syft --source-name app --source-version 2.0.0 -o json . | anchorectl source add github.com/anchore/webinar-demo@106c2d9fffe01f564d889763d904cace7f32be3f --branch 'v2.0.0' --author 'author-from-ci@example.com' --application 'app@v2.0.0' --workflow-name 'default' --from -
 ```
 
 Review the hints file, then build the image locally and tag it as v2.0.0.

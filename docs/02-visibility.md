@@ -94,7 +94,7 @@ Build the v1.0.0 app image locally and tag it as v1.0.0
 ```bash
 docker build . -t app:v1.0.0
 ```
-Submit the new image to Anchore Enterprise (anchorectl will perform full local image analysis locally)
+Submit the new image to Anchore Enterprise (anchorectl will perform full image analysis locally)
 ```bash
 anchorectl image add app:v1.0.0 --from docker 
 ```

@@ -104,11 +104,6 @@ anchorectl image add app:v1.0.0 --from docker
 
 Let's resubmit our local app image, but this time add the Dockerfile as extra data
 ```bash
-anchorectl image add app:v1.0.0 --from docker --dockerfile ./Dockerfile
-```
-When reviewing the UI for this image you may notice "No results" for the Dockerfile tab under images in the Web UI.
-This is because we need to tell Anchore to re analyse the image, and we can do this with --force
-```bash
 anchorectl image add app:v1.0.0 --from docker --dockerfile ./Dockerfile --force
 ```
 Make note of the digest in the output, we will use this in the next step. 

@@ -183,21 +183,12 @@ Output
 └───────────────────────────┴─────────────┴────────┘
 ```
 
-Try for yourself with the centos repo in the docker.io registry.
-
-Set up a subscription to new tag updates for the centos repo from the docker registry. 
-Then submit a bunch of images and checkout the "Event's & Notifications Web" UI.
-
-```bash
-anchorectl image add docker.io/centos:8 --force --wait
-anchorectl image add docker.io/centos:7
-```
 Check out the events generated in the Web UI by visiting `/events`
 
 > [!TIP]
 > If you want to send an event notification from a subscription to an endpoint, please review our [UI Walkthrough](https://docs.anchore.com/current/docs/configuration/notifications/#notifications-ui-walktrough) docs.
 
-Watches and Subscriptions offer many possibilities and combined with notifications, you can start to build very powerful workflows.
+Subscriptions offer many possibilities and combined with notifications, you can start to build very powerful workflows.
 
 ### SBOM Visibility using content hints
 

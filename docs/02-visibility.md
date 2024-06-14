@@ -69,7 +69,7 @@ In fact, they could automate this, by adding these steps into their pipeline scr
 The dev team has been working hard over a long sprint to add "Docker support"! 
 First let's look at these changes to the app
 ```bash
-cd ./examples/app:v1.0.0
+cd ../examples/app:v1.0.0
 ```
 As we did before, let's create a new release called v1.0.0 for the 'app' in Anchore.
 ```bash

@@ -182,51 +182,7 @@ Output
 │ docker.io/danperry/nocode │ repo_update │ true   │
 └───────────────────────────┴─────────────┴────────┘
 ```
-We can not only watch for new tags as they are pushed into the registry.
-But we can also add a subscription that will trigger an event and downstream notification.
-```bash
-anchorectl subscription list
-```
-Output
-```
-✔ Fetched subscriptions
-┌─────────────────────────────────┬─────────────────┬────────┐
-│ KEY                             │ TYPE            │ ACTIVE │
-├─────────────────────────────────┼─────────────────┼────────┤
-│ docker.io/danperry/nocode       │ repo_update     │ true   │
-│ docker.io/danperry/nocode:1.0.0 │ alerts          │ true   │
-└─────────────────────────────────┴─────────────────┴────────┘
-```
-Let's activate the tag_update subscription
-```bash
-anchorectl subscription activate docker.io/danperry/nocode:1.0.0 tag_update
-```
-Output
-```
-✔ Activate subscription
-Key: docker.io/danperry/nocode:1.0.0
-Type: tag_update
-Id: e737986c26126b062de917d36b6eb33c
-Active: true
-```
-Finally, we can list all of our subscriptions to see the state of play.
-```bash
-anchorectl subscription list
-```
-Output
-```
-✔ Fetched subscriptions
-┌─────────────────────────────────┬─────────────────┬────────┐
-│ KEY                             │ TYPE            │ ACTIVE │
-├─────────────────────────────────┼─────────────────┼────────┤
-│ docker.io/danperry/nocode:1.0.0 │ policy_eval     │ false  │
-│ docker.io/danperry/nocode:1.0.0 │ vuln_update     │ false  │
-│ docker.io/danperry/nocode:1.0.0 │ analysis_update │ true   │
-│ docker.io/danperry/nocode       │ repo_update     │ true   │
-│ docker.io/danperry/nocode:1.0.0 │ alerts          │ true   │
-│ docker.io/danperry/nocode:1.0.0 │ tag_update      │ true   │
-└─────────────────────────────────┴─────────────────┴────────┘
-```
+
 Try for yourself with the centos repo in the docker.io registry.
 
 Set up a subscription to new tag updates for the centos repo from the docker registry. 

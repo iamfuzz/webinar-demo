@@ -100,7 +100,7 @@ anchorectl image add app:v1.0.0 --from docker
 ```
 > Local image analysis can be useful if for example, you cannot reach the Anchore API / Deployment from your CI/CD environment
 > For this you can locally perform analysis and store the resulting output like SBOM files into the release notes, code repo or container image currently being built.
-> There are some limitations for example Malware scanning can only take place on the server with centralised analysis.
+> There are some limitations, however. For example, Malware scanning can only take place on the server with centralised analysis.
 
 Let's resubmit our local app image, but this time add the Dockerfile as extra data
 ```bash

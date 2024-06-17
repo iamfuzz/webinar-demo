@@ -59,7 +59,6 @@ Now output the SBOM contents to screen in the table format. This could be useful
 anchorectl source sbom <retrieved-source-UUID> -o table
 ```
 Check out the new application in the Web UI by visiting `/applications` and see the mapping over to our source control commit.
-Finally, please explore how you can export an SBOM.
 
 The team would repeat the above process for each commit they make in the code repository. 
 In fact, they could automate this, by adding these steps into their pipeline scripts.
@@ -79,10 +78,7 @@ Now let's build the SBOM for this release and associate a source artifact to our
 ```bash
 anchorectl syft --source-name app --source-version v1.0.0 -o json . | anchorectl source add github.com/anchore/webinar-demo@88ae9c020d4b730d510e97a31848e181c4934bf0 --branch 'v1.0.0' --author 'author-from-ci@example.com' --application 'app@v1.0.0' --workflow-name 'default' --from -
 ```
-This time they added some richer metadata to the source code associations.
-
-Check out the new application in the Web UI by visiting `/applications` and see the Dockerfile getting picked up.
-Finally drill in and export an SBOM.
+Check out the new application in the Web UI by visiting `/applications`, drill in, and export an SBOM.
 
 This release contained a Dockerfile, so let's move on to build an image.
 
